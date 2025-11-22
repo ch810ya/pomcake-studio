@@ -1,7 +1,18 @@
 export const calculateAnalytics = (sales) => {
-    const totalRevenue = sales.reduce((sum, sale) => sum + parseFloat(sale.price || 0), 0);
+    console.log("📊 Calculating analytics for", sales.length, "sales");
+    console.log("Sample sale:", sales[0]);
+
+    const totalRevenue = sales.reduce((sum, sale) => {
+        const price = Number(sale.price) || 0;
+        return sum + price;
+    }, 0);
+
     const totalOrders = sales.length;
     const averageOrderValue = totalOrders > 0 ? totalRevenue / totalOrders : 0;
+
+    console.log("💰 Total Revenue:", totalRevenue);
+    console.log("📦 Total Orders:", totalOrders);
+    console.log("📊 Avg Order Value:", averageOrderValue);
 
     // Sales by Month
     const monthlyData = {};
@@ -13,7 +24,7 @@ export const calculateAnalytics = (sales) => {
         if (!monthlyData[monthKey]) {
             monthlyData[monthKey] = { label: monthName, total: 0, count: 0 };
         }
-        monthlyData[monthKey].total += parseFloat(sale.price || 0);
+        monthlyData[monthKey].total += Number(sale.price) || 0;
         monthlyData[monthKey].count += 1;
     });
 
@@ -31,7 +42,7 @@ export const calculateAnalytics = (sales) => {
         if (!categoryData[category]) {
             categoryData[category] = 0;
         }
-        categoryData[category] += parseFloat(sale.price || 0);
+        categoryData[category] += Number(sale.price) || 0;
     });
 
     return {

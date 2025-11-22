@@ -12,6 +12,12 @@ const firebaseConfig = {
     measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
+console.log("🔥 Firebase Config Check:", {
+    apiKey: firebaseConfig.apiKey ? "Loaded (Starts with " + firebaseConfig.apiKey.substring(0, 4) + ")" : "MISSING",
+    projectId: firebaseConfig.projectId,
+    authDomain: firebaseConfig.authDomain
+});
+
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();

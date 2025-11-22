@@ -18,16 +18,18 @@ const blogsCollection = collection(db, 'blogs');
 // --- Sales Operations ---
 
 export const addSale = async (saleData) => {
+    console.log("💾 Attempting to save sale:", saleData);
     try {
         const docRef = await addDoc(salesCollection, {
             ...saleData,
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString()
         });
+        console.log("✅ Sale saved successfully with ID:", docRef.id);
         return { success: true, id: docRef.id };
     } catch (error) {
-        console.error("Error adding sale: ", error);
-        return { success: false, error };
+        console.error("❌ Error adding sale: ", error.code, error.message);
+        return { success: false, error: error.message };
     }
 };
 

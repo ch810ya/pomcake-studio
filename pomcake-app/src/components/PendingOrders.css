@@ -1,0 +1,102 @@
+.pending-orders {
+    margin-top: 2rem;
+}
+
+.pending-orders h2 {
+    margin-bottom: 1.5rem;
+    color: var(--light-blue);
+}
+
+.pending-table-container {
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+.pending-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pending-table thead {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.pending-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--light-blue);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.pending-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.pending-table tbody tr:hover {
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.pending-table small {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.status-select {
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.status-select.status-pending {
+    background: rgba(255, 212, 163, 0.2);
+    color: #ff9800;
+    border-color: #ff9800;
+}
+
+.status-select.status-completed {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    border-color: #10b981;
+}
+
+.status-select.status-cancelled {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border-color: #ef4444;
+}
+
+.status-select:hover {
+    transform: scale(1.05);
+}
+
+.no-pending {
+    padding: 3rem;
+    text-align: center;
+}
+
+.no-pending h3 {
+    color: var(--accent-green);
+    margin-bottom: 0.5rem;
+}
+
+.no-pending p {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 1200px) {
+    .pending-table {
+        font-size: 0.9rem;
+    }
+
+    .pending-table th,
+    .pending-table td {
+        padding: 0.75rem 0.5rem;
+    }
+}

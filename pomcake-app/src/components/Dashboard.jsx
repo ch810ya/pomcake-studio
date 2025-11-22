@@ -10,6 +10,7 @@ import {
     Title,
     Tooltip,
     Legend,
+    Filler,
 } from 'chart.js';
 import { Bar, Line, Doughnut } from 'react-chartjs-2';
 import './Dashboard.css';
@@ -24,10 +25,13 @@ ChartJS.register(
     ArcElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
+    Filler
 );
 
 const Dashboard = ({ salesData, stats }) => {
+    console.log("📊 Dashboard Component Props:", { salesData, stats });
+
     // Monthly sales chart data
     const monthlyChartData = useMemo(() => {
         const months = Object.values(salesData.byMonth);

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import DashboardComponent from '../../components/Dashboard'; // Renamed to avoid conflict
+import PendingOrders from '../../components/PendingOrders';
 import { getSales } from '../../services/db';
 import { calculateAnalytics } from '../../utils/analytics';
 
@@ -20,13 +21,18 @@ const Dashboard = () => {
                 setLoading(true);
                 const sales = await getSales();
                 const metrics = calculateAnalytics(sales);
+
+                console.log("🎯 Metrics calculated:", metrics);
+
                 setAnalytics({
                     totalRevenue: metrics.totalRevenue,
                     totalOrders: metrics.totalOrders,
                     averageOrderValue: metrics.averageOrderValue,
                     salesByMonth: metrics.salesByMonth,
-                    salesByCategory: metrics.salesByCategory // Dashboard component expects 'byCategory' prop?
+                    salesByCategory: metrics.salesByCategory
                 });
+
+                console.log("✅ Analytics state set");
                 setError(null);
             } catch (err) {
                 console.error("Dashboard load error:", err);
@@ -64,6 +70,7 @@ const Dashboard = () => {
                     byCategory: analytics.salesByCategory
                 }}
             />
+            <PendingOrders />
         </div>
     );
 };
