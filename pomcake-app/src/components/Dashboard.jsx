@@ -40,8 +40,8 @@ const Dashboard = ({ salesData, stats }) => {
             labels: months.map(m => m.label),
             datasets: [
                 {
-                    label: 'Monthly Revenue',
-                    data: months.map(m => m.total),
+                    label: 'Monthly Orders',
+                    data: months.map(m => m.count),
                     backgroundColor: 'rgba(168, 85, 247, 0.8)',
                     borderColor: 'rgba(168, 85, 247, 1)',
                     borderWidth: 2,
@@ -69,7 +69,7 @@ const Dashboard = ({ salesData, stats }) => {
             datasets: [
                 {
                     label: 'Sales by Category',
-                    data: categories.map(([, data]) => data.total),
+                    data: categories.map(([, data]) => data),
                     backgroundColor: colors,
                     borderColor: colors.map(c => c.replace('0.8', '1')),
                     borderWidth: 2,
@@ -138,7 +138,12 @@ const Dashboard = ({ salesData, stats }) => {
                         if (label) {
                             label += ': ';
                         }
-                        label += 'Rp ' + context.parsed.y.toFixed(2);
+                        const formatted = new Intl.NumberFormat('id-ID').format(context.parsed.y);
+                        if (context.dataset.label === 'Monthly Orders') {
+                            label += formatted;
+                        } else {
+                            label += 'Rp ' + formatted;
+                        }
                         return label;
                     }
                 }
@@ -240,7 +245,7 @@ const Dashboard = ({ salesData, stats }) => {
                     <div className="stat-icon">📊</div>
                     <div className="stat-content">
                         <h3 className="stat-label">Avg Order Value</h3>
-                        <p className="stat-value">Rp {stats.avgOrderValue.toLocaleString('id-ID')}</p>
+                        <p className="stat-value">Rp {Math.round(stats.avgOrderValue).toLocaleString('id-ID')}</p>
                     </div>
                 </div>
             </div>
@@ -248,7 +253,7 @@ const Dashboard = ({ salesData, stats }) => {
             {/* Charts */}
             <div className="charts-grid">
                 <div className="chart-container glass-card fade-in" style={{ animationDelay: '0.3s' }}>
-                    <h3 className="chart-title">📈 Monthly Sales</h3>
+                    <h3 className="chart-title">📊 Monthly Orders</h3>
                     <div className="chart-wrapper">
                         <Bar data={monthlyChartData} options={chartOptions} />
                     </div>

@@ -26,9 +26,7 @@ const AdminLayout = () => {
                     <Link to="/admin/sales" className={`nav-item ${isActive('/admin/sales')}`}>
                         📝 Sales Management
                     </Link>
-                    <Link to="/admin/blog" className={`nav-item ${isActive('/admin/blog')}`}>
-                        ✍️ Blog Manager
-                    </Link>
+
                 </nav>
                 <div className="sidebar-footer">
                     <button onClick={handleSignOut} className="sign-out-btn">

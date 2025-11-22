@@ -1,89 +1,129 @@
 .pending-orders {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .pending-orders h2 {
     margin-bottom: 1.5rem;
-    color: var(--light-blue);
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    font-weight: 600;
 }
 
 .pending-table-container {
-    padding: 1.5rem;
     overflow-x: auto;
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
 }
 
 .pending-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
 .pending-table thead {
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .pending-table th {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     text-align: left;
     font-weight: 600;
-    color: var(--light-blue);
-    border-bottom: 2px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pending-table th:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.pending-table th:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 .pending-table td {
-    padding: 1rem;
-    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 1.5rem;
     color: var(--text-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: middle;
+}
+
+.pending-table tbody tr:last-child td {
+    border-bottom: none;
 }
 
 .pending-table tbody tr:hover {
-    background: rgba(59, 130, 246, 0.05);
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .pending-table small {
     color: var(--text-secondary);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 2px;
 }
 
+/* Status Select Styling */
 .status-select {
-    padding: 0.5rem 0.75rem;
-    border-radius: 8px;
-    border: 2px solid transparent;
+    padding: 6px 12px;
+    border-radius: 50px;
+    border: 1px solid transparent;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    outline: none;
+    appearance: none;
+    /* Remove default arrow for cleaner look if desired, or keep */
 }
 
 .status-select.status-pending {
-    background: rgba(255, 212, 163, 0.2);
-    color: #ff9800;
-    border-color: #ff9800;
+    background: rgba(251, 146, 60, 0.15);
+    color: #fbbf24;
+    border-color: rgba(251, 146, 60, 0.3);
 }
 
 .status-select.status-completed {
-    background: rgba(16, 185, 129, 0.2);
-    color: #10b981;
-    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border-color: rgba(16, 185, 129, 0.3);
 }
 
 .status-select.status-cancelled {
-    background: rgba(239, 68, 68, 0.2);
-    color: #ef4444;
-    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border-color: rgba(239, 68, 68, 0.3);
 }
 
 .status-select:hover {
-    transform: scale(1.05);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+.status-select:focus {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Empty State */
 .no-pending {
     padding: 3rem;
     text-align: center;
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .no-pending h3 {
-    color: var(--accent-green);
+    color: #34d399;
     margin-bottom: 0.5rem;
+    font-size: 1.25rem;
 }
 
 .no-pending p {
@@ -91,12 +131,9 @@
 }
 
 @media (max-width: 1200px) {
-    .pending-table {
-        font-size: 0.9rem;
-    }
 
     .pending-table th,
     .pending-table td {
-        padding: 0.75rem 0.5rem;
+        padding: 0.75rem 1rem;
     }
 }

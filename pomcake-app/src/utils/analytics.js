@@ -38,7 +38,7 @@ export const calculateAnalytics = (sales) => {
     // Sales by Category (Cake Type)
     const categoryData = {};
     sales.forEach(sale => {
-        const category = sale.cake || 'Unknown';
+        const category = sale.cake || sale.item || 'Unknown';
         if (!categoryData[category]) {
             categoryData[category] = 0;
         }

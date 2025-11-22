@@ -1,16 +1,21 @@
 .recent-sales {
-    margin-top: var(--spacing-2xl);
+    margin-top: 3rem;
 }
 
 .section-title {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 1.5rem;
     font-size: 1.5rem;
+    color: var(--color-text-primary);
+    font-weight: 600;
 }
 
 .empty-state {
     text-align: center;
-    padding: var(--spacing-2xl);
+    padding: 3rem;
     color: var(--text-secondary);
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .empty-state p {
@@ -19,67 +24,72 @@
 
 .sales-table-container {
     overflow-x: auto;
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
 }
 
 .sales-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
 .sales-table thead {
-    background: var(--bg-tertiary);
-    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .sales-table th {
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: 1rem 1.5rem;
     text-align: left;
     font-weight: 600;
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sales-table th:first-child {
-    border-top-left-radius: var(--radius-md);
-    border-bottom-left-radius: var(--radius-md);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
 .sales-table th:last-child {
-    border-top-right-radius: var(--radius-md);
-    border-bottom-right-radius: var(--radius-md);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 .sale-row {
-    border-bottom: 1px solid var(--border-color);
-    transition: all var(--transition-base);
-    animation: slideIn var(--transition-slow) ease-out;
+    transition: background-color 0.2s ease;
 }
 
 .sale-row:hover {
-    background: var(--bg-tertiary);
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .sales-table td {
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: 1rem 1.5rem;
     color: var(--text-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: middle;
 }
 
-.item-name {
-    font-weight: 500;
-    color: var(--text-primary);
+.sale-row:last-child td {
+    border-bottom: none;
 }
 
 .customer-name {
     font-weight: 500;
     color: var(--text-primary);
+    display: block;
 }
 
 .contact-info {
-    font-size: 0.85rem;
-    color: var(--text-tertiary);
-    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
 }
 
 .cake-name {
@@ -87,87 +97,80 @@
     color: var(--text-primary);
 }
 
+/* Status Badges */
 .status-badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: var(--radius-sm);
-    font-size: 0.85rem;
-    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
 .status-completed {
-    background: rgba(16, 185, 129, 0.2);
-    color: var(--success);
-    border: 1px solid var(--success);
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
 .status-pending {
-    background: rgba(251, 146, 60, 0.2);
-    color: var(--warning);
-    border: 1px solid var(--warning);
+    background: rgba(251, 146, 60, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 146, 60, 0.3);
 }
 
 .status-cancelled {
-    background: rgba(239, 68, 68, 0.2);
-    color: var(--error);
-    border: 1px solid var(--error);
-}
-
-.category-badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background: var(--primary-500);
-    color: white;
-    border-radius: var(--radius-sm);
-    font-size: 0.85rem;
-    font-weight: 500;
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
 .total-cell {
     font-weight: 600;
-    color: var(--accent-500);
+    color: var(--light-blue);
 }
 
 .action-buttons {
     display: flex;
-    gap: var(--spacing-sm);
-    justify-content: center;
+    gap: 0.5rem;
 }
 
 .edit-btn,
 .delete-btn {
     background: transparent;
     border: none;
-    padding: 0.5rem;
+    padding: 6px;
     cursor: pointer;
-    font-size: 1.2rem;
-    transition: transform var(--transition-fast);
-    opacity: 0.6;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.7;
+    border-radius: 6px;
 }
 
-.edit-btn:hover,
-.delete-btn:hover {
-    transform: scale(1.2);
+.edit-btn:hover {
+    transform: scale(1.1);
     opacity: 1;
+    background: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+}
+
+.delete-btn:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    background: rgba(239, 68, 68, 0.1);
+    color: #f87171;
 }
 
 @media (max-width: 768px) {
-    .sales-table {
-        font-size: 0.85rem;
-    }
 
     .sales-table th,
     .sales-table td {
-        padding: var(--spacing-sm) var(--spacing-md);
-    }
-
-    .category-badge {
-        font-size: 0.75rem;
-        padding: 0.2rem 0.5rem;
+        padding: 0.75rem 1rem;
     }
 
     .status-badge {
+        padding: 2px 8px;
         font-size: 0.75rem;
-        padding: 0.2rem 0.5rem;
     }
 }

@@ -1,0 +1,128 @@
+[
+    {
+        "id": "classic-pomisu",
+        "name": "Classic Pomisu",
+        "category": "Limited Edition",
+        "flavour": "Classic Pomisu",
+        "price": 120000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Classic%20Pomisu"
+    },
+    {
+        "id": "pistachio-pomisu",
+        "name": "Pistachio Pomisu",
+        "category": "Limited Edition",
+        "flavour": "Pistachio Pomisu",
+        "price": 135000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Pistachio%20Pomisu"
+    },
+    {
+        "id": "ubi-cilembu",
+        "name": "Ubi Cilembu",
+        "category": "Limited Edition",
+        "flavour": "Ubi Cilembu",
+        "price": 110000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Ubi%20Cilembu"
+    },
+    {
+        "id": "four-choco",
+        "name": "Four Choco",
+        "category": "All Time Favourites",
+        "flavour": "Four Choco",
+        "price": 115000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Four%20Choco"
+    },
+    {
+        "id": "cookies-n-cream",
+        "name": "Cookies n Cream",
+        "category": "All Time Favourites",
+        "flavour": "Cookies n Cream",
+        "price": 120000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Cookies%20n%20Cream"
+    },
+    {
+        "id": "matcha-strawberry",
+        "name": "Matcha Strawberry",
+        "category": "All Time Favourites",
+        "flavour": "Matcha Strawberry",
+        "price": 130000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Matcha%20Strawberry"
+    },
+    {
+        "id": "passionfruit",
+        "name": "Passionfruit",
+        "category": "All Time Favourites",
+        "flavour": "Passionfruit",
+        "price": 125000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Passionfruit"
+    },
+    {
+        "id": "basque-original",
+        "name": "Basque Burnt Cheese – Original",
+        "category": "Basque Burnt Cheese cake",
+        "flavour": "Original",
+        "price": 140000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Basque%20Original"
+    },
+    {
+        "id": "basque-strawberry",
+        "name": "Basque Burnt Cheese – Strawberry",
+        "category": "Basque Burnt Cheese cake",
+        "flavour": "Strawberry",
+        "price": 145000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Basque%20Strawberry"
+    },
+    {
+        "id": "basque-passionfruit",
+        "name": "Basque Burnt Cheese – Passionfruit",
+        "category": "Basque Burnt Cheese cake",
+        "flavour": "Passionfruit",
+        "price": 150000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Basque%20Passionfruit"
+    },
+    {
+        "id": "bento-choco",
+        "name": "Bento Cake – Choco",
+        "category": "Bento cake",
+        "flavour": "Choco",
+        "price": 130000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Bento%20Choco"
+    },
+    {
+        "id": "bento-strawberry",
+        "name": "Bento Cake – Strawberry",
+        "category": "Bento cake",
+        "flavour": "Strawberry",
+        "price": 135000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Bento%20Strawberry"
+    },
+    {
+        "id": "bento-passionfruit",
+        "name": "Bento Cake – Passionfruit",
+        "category": "Bento cake",
+        "flavour": "Passionfruit",
+        "price": 140000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Bento%20Passionfruit"
+    },
+    {
+        "id": "bento-oreo",
+        "name": "Bento Cake – Oreo",
+        "category": "Bento cake",
+        "flavour": "Oreo",
+        "price": 145000,
+        "image": "/cakes/sample.jpg",
+        "whatsapp": "https://wa.me/628123456789?text=I%20want%20to%20order%20Bento%20Oreo"
+    }
+]
